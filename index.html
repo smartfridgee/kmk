@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Katalog Miejscówek Kolejowych</title>
+    <meta name="description" content="Katalog Miejscówek Kolejowych">
+    <meta name="keywords" content="Trains, Spots, Miejscówki, Pociągi, Polska">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    <script defer src="database.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header><h1>KMK</h1></header>
+    <main>
+        <div class="hidden details-container">
+            <div id="closeTrigger"></div>
+            <div id="details" class="details">
+                <div class="details-inner-container">
+                    <img id="image" src="">
+                    <div class="details-text-container">
+                        <div>miasto:<h3 id="city" class="details-title"></h3></div>
+                        <div>ulica:<h3 id="street" class="details-title"></h3></div>
+                        <div>zdjęcie:<h3 id="author" class="details-title"></h3></div>
+                    </div>
+                    <div id="locationMap"></div>
+                </div>
+                <button class="details-button"onclick="closeDetails()">Zamknij</button>
+            </div>
+        </div>
+        <input type="text" id="search" class="search" placeholder="szukaj">
+        <section id="group">
+            <!-- <div class="element">
+                <img src="https://ok-kolej.pl/data/media/28/_MG_9850.jpg">
+                <div class="text-container">
+                    <h2 class="title">Szczecin, Wolińska</h2>
+                    <p class="more">Więcej informacji</p>
+                 </div>
+            </div>
+            <div class="element">
+                <img src="https://ok-kolej.pl/data/media/22/DSC_7805.jpg">
+                <div class="text-container">
+                    <h2 class="title">Rzepin, Obwodnica</h2>
+                    <p class="more">Więcej informacji</p>
+                 </div>
+            </div>
+            <div class="element">
+                <img src="https://ok-kolej.pl/data/media/196/EN63H-001_2.jpg">
+                <div class="text-container">
+                    <h2 class="title">U wujka, W wannie</h2>
+                    <p class="more">Więcej informacji</p>
+                 </div>
+            </div>
+            <div class="element">
+                <img src="https://ok-kolej.pl/data/media/22/_MG_9737.jpg">
+                <div class="text-container">
+                    <h2 class="title">Szczecin, Przeruchana</h2>
+                    <p class="more">Więcej informacji</p>
+                 </div>
+            </div>
+            <div class="element">
+                <img src="https://ok-kolej.pl/data/media/196/EN63H-001_2.jpg">
+                <div class="text-container">
+                    <h2 class="title">U wujka, W wannie</h2>
+                    <p class="more">Więcej informacji</p>
+                 </div>
+            </div>
+            <div class="element">
+                <img src="https://ok-kolej.pl/data/media/22/_MG_9737.jpg">
+                <div class="text-container">
+                    <h2 class="title">Szczecin, Przeruchana</h2>
+                    <p class="more">Więcej informacji</p>
+                 </div>
+            </div> -->
+        </section>
+        <div class="button-container">
+            <button id="load" class="load" onclick="loadButton()">Załaduj Więcej</button>
+        </div>
+    </main>
+</body>
+</html>
