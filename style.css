@@ -223,6 +223,16 @@ section{
     transition: filter 100ms;
 }
 
+@media (max-width: 600px){
+    .details-text-container h3{
+        font-size: 3vw;
+    }
+
+    .details-text-container{
+        font-size: 2.6vw;
+    }
+}
+
 #locationMap{
     height: 20rem;
     width: 100%;

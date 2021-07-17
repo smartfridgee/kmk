@@ -28,8 +28,11 @@ function loadData(){
 }
 
 function loadButton(){
+    let targetId = dataCounter;
     loadData();
-    window.scrollTo(0,document.body.scrollHeight);
+    let target = document.getElementById(targetId);
+    target.scrollIntoView({behavior: "smooth", block: "start"});
+    //window.scrollTo(0,document.body.scrollHeight);
 }
 
 let serachInput = document.getElementById('search');
